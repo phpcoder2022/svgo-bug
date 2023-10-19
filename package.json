@@ -1,0 +1,18 @@
+{
+  "name": "svgo-bug",
+  "version": "1.0.0",
+  "description": "Project for show svgo bug",
+  "private": true,
+  "scripts": {
+    "build": "webpack"
+  },
+  "author": "phpcoder2022@yandex.ru",
+  "license": "MIT",
+  "devDependencies": {
+    "html-webpack-plugin": "^5.5.3",
+    "image-minimizer-webpack-plugin": "^3.8.3",
+    "svgo": "^3.0.2",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
+  }
+}
