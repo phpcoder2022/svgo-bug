@@ -1,6 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
-const excludedSvgoPluginsBecauseItCorruptImages = ['convertTransform'];
 
 module.exports = {
   mode: 'production',
@@ -35,43 +34,11 @@ module.exports = {
               encodeOptions: {
                 multipass: true,
                 plugins: [
-                  'cleanupAttrs',
-                  'cleanupEnableBackground',
-                  'cleanupIds',
-                  'cleanupListOfValues',
-                  'cleanupNumericValues',
-                  'collapseGroups',
-                  'convertColors',
-                  'convertEllipseToCircle',
-                  'convertPathData',
-                  'convertShapeToPath',
-                  'convertTransform',
-                  'inlineStyles',
-                  'mergePaths',
-                  'mergeStyles',
-                  'minifyStyles',
-                  'moveElemsAttrsToGroup',
-                  'moveGroupAttrsToElems',
-                  'removeComments',
-                  'removeDesc',
-                  'removeDoctype',
-                  'removeEditorsNSData',
-                  'removeEmptyAttrs',
-                  'removeEmptyContainers',
-                  'removeEmptyText',
-                  'removeHiddenElems',
-                  'removeMetadata',
-                  'removeNonInheritableGroupAttrs',
-                  'removeTitle',
-                  'removeUnknownsAndDefaults',
-                  'removeUnusedNS',
-                  'removeUselessDefs',
-                  'removeUselessStrokeAndFill',
-                  'removeViewBox',
-                  'removeXMLProcInst',
-                  'sortAttrs',
-                  'sortDefsChildren',
-                ].filter(item => !excludedSvgoPluginsBecauseItCorruptImages.includes(item)),
+                  {
+                    // bug appears
+                    name: 'preset-default',
+                  },
+                ],
               },
             },
           },
