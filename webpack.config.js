@@ -39,7 +39,9 @@ module.exports = {
                     name: 'preset-default',
                     params: {
                       overrides: {
-                        convertTransform: false,
+                        convertTransform: {
+                          collapseIntoOne: false,
+                        },
                       },
                     },
                   },
