@@ -35,8 +35,13 @@ module.exports = {
                 multipass: true,
                 plugins: [
                   {
-                    // bug appears
+                    // bug disappears
                     name: 'preset-default',
+                    params: {
+                      overrides: {
+                        convertTransform: false,
+                      },
+                    },
                   },
                 ],
               },
